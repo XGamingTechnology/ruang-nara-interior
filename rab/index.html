@@ -9,6 +9,7 @@
   <link rel="icon" href="../favicon.svg" />
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./calculator.css" />
+  <link rel="stylesheet" href="./demo-project.css" />
 </head>
 <body>
   <header class="topbar">
@@ -31,7 +32,7 @@
         <p class="lead">Konsep sistem yang menghubungkan model SketchUp/BIM dengan quantity takeoff, BOQ, rule konstruksi, price book, dan RAB. AI membantu membaca dan mengklasifikasikan. Angka tetap dihitung oleh geometri dan formula yang dapat diaudit.</p>
         <div class="hero-actions">
           <a class="primary" href="#calculator">Coba Live RAB ↓</a>
-          <span class="prototype">SEMI-INTERACTIVE POC · MVP 03</span>
+          <span class="prototype">SEMI-INTERACTIVE POC · MVP 04</span>
         </div>
       </div>
 
@@ -39,12 +40,12 @@
         <p class="card-kicker">PROJECT SNAPSHOT</p>
         <h2>Senopati Residence</h2>
         <div class="mini-grid">
-          <div><span>DESIGN</span><b>Rev. 03</b></div>
-          <div><span>MODEL</span><b>IFC + GLB</b></div>
+          <div><span>DESIGN</span><b>Rev. 04 Demo</b></div>
+          <div><span>MODEL</span><b>IFC-like JSON</b></div>
           <div><span>AREA</span><b>320 m²</b></div>
           <div><span>ENGINE</span><b>Live POC</b></div>
         </div>
-        <div class="health"><i></i><span>Quantity formula ready</span></div>
+        <div class="health"><i></i><span>Dummy model + quantity formula ready</span></div>
       </aside>
     </section>
 
@@ -72,7 +73,7 @@
 
     <section class="section dark" id="takeoff">
       <div class="section-head">
-        <div><p class="eyebrow light">03 · QUANTITY TAKEOFF REFERENCE</p><h2>Geometri menghitung.<br><em>Bukan AI menebak.</em></h2></div>
+        <div><p class="eyebrow light">04 · QUANTITY TAKEOFF REFERENCE</p><h2>Geometri menghitung.<br><em>Bukan AI menebak.</em></h2></div>
         <p>Contoh referensi: satu dinding dibaca dari model, opening dikurangi, lalu rule pekerjaan menghasilkan item turunannya.</p>
       </div>
 
@@ -110,30 +111,29 @@
 
     <section class="section" id="revision">
       <div class="section-head">
-        <div><p class="eyebrow">04 · DESIGN REVISION IMPACT</p><h2>Desain berubah.<br>RAB ikut bergerak.</h2></div>
+        <div><p class="eyebrow">05 · DESIGN REVISION IMPACT</p><h2>Desain berubah.<br>RAB ikut bergerak.</h2></div>
         <p>Nilai utama sistem adalah membandingkan revisi model dan menunjukkan dampak kuantitas serta biaya tanpa menghitung ulang manual.</p>
       </div>
 
       <div class="revision-shell">
         <div class="revision-top">
-          <div><small>FROM</small><b>REVISION 02</b><span>Wall length 5.00 m</span></div>
+          <div><small>FROM</small><b>REVISION 03</b><span>Kitchen wall 5.00 m</span></div>
           <div class="change-arrow">→</div>
-          <div><small>TO</small><b>REVISION 03</b><span>Wall length 7.50 m</span></div>
-          <div class="impact-total"><small>COST IMPACT</small><strong>+ Rp 3.870.000</strong></div>
+          <div><small>TO</small><b>REVISION 04 DEMO</b><span>Kitchen wall 7.50 m</span></div>
+          <div class="impact-total"><small>COST IMPACT</small><strong>Calculated from dummy model</strong></div>
         </div>
         <div class="impact-table">
           <div class="table-head"><span>ITEM</span><span>BEFORE</span><span>AFTER</span><span>DELTA</span></div>
-          <div><span>Wall area</span><span>14.11 m²</span><span>22.11 m²</span><b>+ 8.00 m²</b></div>
-          <div><span>Plaster</span><span>28.22 m²</span><span>44.22 m²</span><b>+ 16.00 m²</b></div>
-          <div><span>Paint</span><span>28.22 m²</span><span>44.22 m²</span><b>+ 16.00 m²</b></div>
-          <div><span>Estimated cost</span><span>Rp 6,84 jt</span><span>Rp 10,71 jt</span><b>+ Rp 3,87 jt</b></div>
+          <div><span>Source</span><span>Rev. 03 JSON</span><span>Rev. 04 JSON</span><b>Auto compare</b></div>
+          <div><span>Geometry</span><span>Baseline override</span><span>Current model</span><b>Detected</b></div>
+          <div><span>Cost</span><span>Calculated</span><span>Calculated</span><b>Live in dummy project</b></div>
         </div>
       </div>
     </section>
 
     <section class="section dark" id="ai">
       <div class="section-head">
-        <div><p class="eyebrow light">05 · AI ASSISTANT</p><h2>AI membantu memahami.<br><em>Formula tetap memutuskan angka.</em></h2></div>
+        <div><p class="eyebrow light">06 · AI ASSISTANT</p><h2>AI membantu memahami.<br><em>Formula tetap memutuskan angka.</em></h2></div>
         <p>AI berada di layer interpretasi: membaca nama objek, room context, material, dan menyarankan klasifikasi pekerjaan. User tetap melakukan approval.</p>
       </div>
 
@@ -158,28 +158,9 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-head">
-        <div><p class="eyebrow">06 · RAB SNAPSHOT</p><h2>Satu dashboard biaya.</h2></div>
-        <p>Mockup akhir dari hasil quantity engine, rule pekerjaan, dan price book proyek.</p>
-      </div>
-
-      <div class="rab-dashboard">
-        <div class="cost-list">
-          <div><span>Architecture</span><b>Rp 185.400.000</b></div>
-          <div><span>Interior</span><b>Rp 212.300.000</b></div>
-          <div><span>MEP</span><b>Rp 74.500.000</b></div>
-          <div><span>Landscape</span><b>Rp 28.400.000</b></div>
-          <div class="subtotal"><span>Subtotal</span><b>Rp 500.600.000</b></div>
-          <div><span>Contingency 5%</span><b>Rp 25.030.000</b></div>
-        </div>
-        <div class="grand-total"><small>PROJECT ESTIMATE</small><strong>Rp 525.630.000</strong><span>Rev. 03 · Concept estimate</span></div>
-      </div>
-    </section>
-
     <section class="section roadmap">
       <p class="eyebrow">MVP ROADMAP</p>
-      <h2>Kita mulai dari lima item yang paling mudah diaudit.</h2>
+      <h2>Dummy engine sekarang sudah menguji lima kelompok quantity.</h2>
       <div class="roadmap-grid">
         <div><b>01</b><span>Wall</span></div>
         <div><b>02</b><span>Floor</span></div>
@@ -187,15 +168,16 @@
         <div><b>04</b><span>Door & Window</span></div>
         <div><b>05</b><span>Simple Concrete</span></div>
       </div>
-      <p class="roadmap-note">Tahap berikutnya: cabinetry, finishing detail, struktur, MEP, supplier price book, dan revision compare otomatis.</p>
+      <p class="roadmap-note">Tahap berikutnya: mengganti dummy JSON dengan parser IFC asli, lalu menambahkan cabinetry, finishing detail, struktur, MEP, supplier price book, dan revision compare otomatis.</p>
     </section>
   </main>
 
   <footer>
     <a class="brand" href="../"><span class="brand-mark">RN</span><span>RUANG NARA<small>DESIGN INTELLIGENCE</small></span></a>
-    <div><span>SEMI-INTERACTIVE POC</span><b>Design → Quantity → BOQ → RAB</b></div>
+    <div><span>SEMI-INTERACTIVE POC</span><b>Design → Model Data → Quantity → BOQ → RAB</b></div>
     <a class="outline" href="../demo-3d/">Back to 3D Showroom ↗</a>
   </footer>
   <script src="./calculator.js"></script>
+  <script src="./demo-project.js"></script>
 </body>
 </html>
