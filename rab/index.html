@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#11110e" />
   <title>Ruang Nara | Design to RAB Concept</title>
-  <meta name="description" content="Mockup statis konsep Ruang Nara: SketchUp dan IFC menjadi quantity takeoff, BOQ, dan RAB." />
+  <meta name="description" content="Mockup konsep Ruang Nara: SketchUp dan IFC menjadi quantity takeoff, BOQ, dan RAB." />
   <link rel="icon" href="../favicon.svg" />
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./calculator.css" />
 </head>
 <body>
   <header class="topbar">
@@ -29,8 +30,8 @@
         <h1>Design once.<br><em>Visualize. Calculate. Price.</em></h1>
         <p class="lead">Konsep sistem yang menghubungkan model SketchUp/BIM dengan quantity takeoff, BOQ, rule konstruksi, price book, dan RAB. AI membantu membaca dan mengklasifikasikan. Angka tetap dihitung oleh geometri dan formula yang dapat diaudit.</p>
         <div class="hero-actions">
-          <a class="primary" href="#flow">Lihat alur sistem ↓</a>
-          <span class="prototype">STATIC CONCEPT · MVP 02</span>
+          <a class="primary" href="#calculator">Coba Live RAB ↓</a>
+          <span class="prototype">SEMI-INTERACTIVE POC · MVP 03</span>
         </div>
       </div>
 
@@ -41,9 +42,9 @@
           <div><span>DESIGN</span><b>Rev. 03</b></div>
           <div><span>MODEL</span><b>IFC + GLB</b></div>
           <div><span>AREA</span><b>320 m²</b></div>
-          <div><span>RAB</span><b>Rp 525,63 jt</b></div>
+          <div><span>ENGINE</span><b>Live POC</b></div>
         </div>
-        <div class="health"><i></i><span>Quantity model ready</span></div>
+        <div class="health"><i></i><span>Quantity formula ready</span></div>
       </aside>
     </section>
 
@@ -71,8 +72,8 @@
 
     <section class="section dark" id="takeoff">
       <div class="section-head">
-        <div><p class="eyebrow light">02 · QUANTITY TAKEOFF</p><h2>Geometri menghitung.<br><em>Bukan AI menebak.</em></h2></div>
-        <p>Contoh mockup: satu dinding dibaca dari model, opening dikurangi, lalu rule pekerjaan menghasilkan item turunannya.</p>
+        <div><p class="eyebrow light">03 · QUANTITY TAKEOFF REFERENCE</p><h2>Geometri menghitung.<br><em>Bukan AI menebak.</em></h2></div>
+        <p>Contoh referensi: satu dinding dibaca dari model, opening dikurangi, lalu rule pekerjaan menghasilkan item turunannya.</p>
       </div>
 
       <div class="takeoff-grid">
@@ -109,7 +110,7 @@
 
     <section class="section" id="revision">
       <div class="section-head">
-        <div><p class="eyebrow">03 · DESIGN REVISION IMPACT</p><h2>Desain berubah.<br>RAB ikut bergerak.</h2></div>
+        <div><p class="eyebrow">04 · DESIGN REVISION IMPACT</p><h2>Desain berubah.<br>RAB ikut bergerak.</h2></div>
         <p>Nilai utama sistem adalah membandingkan revisi model dan menunjukkan dampak kuantitas serta biaya tanpa menghitung ulang manual.</p>
       </div>
 
@@ -132,7 +133,7 @@
 
     <section class="section dark" id="ai">
       <div class="section-head">
-        <div><p class="eyebrow light">04 · AI ASSISTANT</p><h2>AI membantu memahami.<br><em>Formula tetap memutuskan angka.</em></h2></div>
+        <div><p class="eyebrow light">05 · AI ASSISTANT</p><h2>AI membantu memahami.<br><em>Formula tetap memutuskan angka.</em></h2></div>
         <p>AI berada di layer interpretasi: membaca nama objek, room context, material, dan menyarankan klasifikasi pekerjaan. User tetap melakukan approval.</p>
       </div>
 
@@ -159,7 +160,7 @@
 
     <section class="section">
       <div class="section-head">
-        <div><p class="eyebrow">05 · RAB SNAPSHOT</p><h2>Satu dashboard biaya.</h2></div>
+        <div><p class="eyebrow">06 · RAB SNAPSHOT</p><h2>Satu dashboard biaya.</h2></div>
         <p>Mockup akhir dari hasil quantity engine, rule pekerjaan, dan price book proyek.</p>
       </div>
 
@@ -192,8 +193,9 @@
 
   <footer>
     <a class="brand" href="../"><span class="brand-mark">RN</span><span>RUANG NARA<small>DESIGN INTELLIGENCE</small></span></a>
-    <div><span>STATIC CONCEPT</span><b>Design → Quantity → BOQ → RAB</b></div>
+    <div><span>SEMI-INTERACTIVE POC</span><b>Design → Quantity → BOQ → RAB</b></div>
     <a class="outline" href="../demo-3d/">Back to 3D Showroom ↗</a>
   </footer>
+  <script src="./calculator.js"></script>
 </body>
 </html>
