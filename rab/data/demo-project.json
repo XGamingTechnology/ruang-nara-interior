@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "0.1-demo",
+  "project": {
+    "id": "RN-DEMO-001",
+    "name": "Senopati Residence",
+    "location": "Jakarta Selatan",
+    "designRevision": "Rev. 04 Demo",
+    "grossFloorAreaM2": 320,
+    "source": "Dummy IFC-like dataset",
+    "currency": "IDR"
+  },
+  "rules": {
+    "wallWastePct": 5,
+    "floorWastePct": 7,
+    "ceilingWastePct": 5,
+    "finishSides": 2
+  },
+  "priceBook": {
+    "wall_aac_100_m2": 165000,
+    "plaster_m2": 68000,
+    "skim_coat_m2": 42000,
+    "paint_wall_m2": 48000,
+    "floor_tile_600_m2": 385000,
+    "floor_engineered_wood_m2": 575000,
+    "ceiling_gypsum_m2": 225000,
+    "door_solid_wood_unit": 4800000,
+    "door_service_unit": 2850000,
+    "window_aluminium_unit": 3200000,
+    "concrete_k300_m3": 1350000
+  },
+  "elements": [
+    {
+      "id": "WALL-01",
+      "ifcClass": "IfcWall",
+      "type": "wall",
+      "name": "Living Room Wall",
+      "room": "Living Room",
+      "material": "AAC 100 mm",
+      "geometry": { "lengthM": 5.0, "heightM": 3.2, "thicknessM": 0.1 },
+      "openings": [
+        { "id": "DOOR-01-OPENING", "type": "door", "widthM": 0.9, "heightM": 2.1, "count": 1 }
+      ]
+    },
+    {
+      "id": "WALL-02",
+      "ifcClass": "IfcWall",
+      "type": "wall",
+      "name": "Kitchen Feature Wall",
+      "room": "Kitchen",
+      "material": "AAC 100 mm",
+      "geometry": { "lengthM": 7.5, "heightM": 3.2, "thicknessM": 0.1 },
+      "openings": [
+        { "id": "WIN-01-OPENING", "type": "window", "widthM": 1.8, "heightM": 1.2, "count": 1 }
+      ]
+    },
+    {
+      "id": "WALL-03",
+      "ifcClass": "IfcWall",
+      "type": "wall",
+      "name": "Master Bedroom Wall",
+      "room": "Master Bedroom",
+      "material": "AAC 100 mm",
+      "geometry": { "lengthM": 4.5, "heightM": 3.0, "thicknessM": 0.1 },
+      "openings": []
+    },
+    {
+      "id": "FLOOR-01",
+      "ifcClass": "IfcSlab",
+      "type": "floor",
+      "name": "Living Dining Floor",
+      "room": "Living + Dining",
+      "finish": "Porcelain Tile 600x600",
+      "priceKey": "floor_tile_600_m2",
+      "geometry": { "areaM2": 42.5 }
+    },
+    {
+      "id": "FLOOR-02",
+      "ifcClass": "IfcSlab",
+      "type": "floor",
+      "name": "Kitchen Floor",
+      "room": "Kitchen",
+      "finish": "Porcelain Tile 600x600",
+      "priceKey": "floor_tile_600_m2",
+      "geometry": { "areaM2": 18.0 }
+    },
+    {
+      "id": "FLOOR-03",
+      "ifcClass": "IfcSlab",
+      "type": "floor",
+      "name": "Master Bedroom Floor",
+      "room": "Master Bedroom",
+      "finish": "Engineered Wood",
+      "priceKey": "floor_engineered_wood_m2",
+      "geometry": { "areaM2": 28.0 }
+    },
+    {
+      "id": "CEILING-01",
+      "ifcClass": "IfcCovering",
+      "type": "ceiling",
+      "name": "Living Dining Ceiling",
+      "room": "Living + Dining",
+      "finish": "Gypsum + Paint",
+      "priceKey": "ceiling_gypsum_m2",
+      "geometry": { "areaM2": 42.5 }
+    },
+    {
+      "id": "CEILING-02",
+      "ifcClass": "IfcCovering",
+      "type": "ceiling",
+      "name": "Master Bedroom Ceiling",
+      "room": "Master Bedroom",
+      "finish": "Gypsum + Paint",
+      "priceKey": "ceiling_gypsum_m2",
+      "geometry": { "areaM2": 28.0 }
+    },
+    {
+      "id": "DOOR-01",
+      "ifcClass": "IfcDoor",
+      "type": "door",
+      "name": "Main Solid Wood Door",
+      "room": "Entrance",
+      "priceKey": "door_solid_wood_unit",
+      "geometry": { "widthM": 0.9, "heightM": 2.4, "count": 1 }
+    },
+    {
+      "id": "DOOR-02",
+      "ifcClass": "IfcDoor",
+      "type": "door",
+      "name": "Service Door",
+      "room": "Kitchen",
+      "priceKey": "door_service_unit",
+      "geometry": { "widthM": 0.8, "heightM": 2.1, "count": 1 }
+    },
+    {
+      "id": "WINDOW-01",
+      "ifcClass": "IfcWindow",
+      "type": "window",
+      "name": "Kitchen Aluminium Window",
+      "room": "Kitchen",
+      "priceKey": "window_aluminium_unit",
+      "geometry": { "widthM": 1.8, "heightM": 1.2, "count": 1 }
+    },
+    {
+      "id": "COLUMN-SET-01",
+      "ifcClass": "IfcColumn",
+      "type": "concrete",
+      "name": "RC Columns 300x300",
+      "room": "Structure",
+      "priceKey": "concrete_k300_m3",
+      "geometry": { "widthM": 0.3, "depthM": 0.3, "heightM": 3.5, "count": 8 }
+    },
+    {
+      "id": "SLAB-01",
+      "ifcClass": "IfcSlab",
+      "type": "concrete",
+      "name": "Ground Floor RC Slab",
+      "room": "Structure",
+      "priceKey": "concrete_k300_m3",
+      "geometry": { "areaM2": 80.0, "thicknessM": 0.12, "count": 1 }
+    }
+  ],
+  "revisionBaseline": {
+    "name": "Rev. 03",
+    "notes": "Kitchen feature wall length before revision",
+    "overrides": {
+      "WALL-02": { "lengthM": 5.0 }
+    }
+  }
+}
