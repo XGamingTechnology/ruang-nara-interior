@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#14130f" />
+  <title>Ruang Nara | Interactive 3D Showroom MVP</title>
+  <meta name="description" content="Prototype showroom interaktif Ruang Nara: MapLibre, 3D architecture, dan 360 interior experience." />
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="../" aria-label="Kembali ke website Ruang Nara">
+        <span class="brand-mark">RN</span>
+        <span class="brand-copy">RUANG NARA<small>INTERACTIVE SHOWROOM</small></span>
+      </a>
+
+      <nav class="mode-switcher" aria-label="Mode tampilan">
+        <button class="mode-button is-active" data-mode="map">01 MAP</button>
+        <button class="mode-button" data-mode="model">02 3D</button>
+        <button class="mode-button" data-mode="panorama">03 360°</button>
+      </nav>
+
+      <a class="contact-link" href="https://wa.me/6281234567890" target="_blank" rel="noreferrer">Konsultasi ↗</a>
+    </header>
+
+    <section class="viewer-stage">
+      <div id="map-view" class="viewer is-active" aria-label="Peta lokasi proyek"></div>
+      <div id="model-view" class="viewer" aria-label="Model 3D arsitektur"></div>
+      <div id="panorama-view" class="viewer" aria-label="Panorama interior 360 derajat"></div>
+
+      <aside class="project-panel">
+        <p class="eyebrow">FEATURED PROJECT · DEMO</p>
+        <h1>Senopati<br /><em>Residence</em></h1>
+        <p class="project-description">Prototype pengalaman digital dari konteks lokasi, model arsitektur, sampai pengalaman interior 360°.</p>
+
+        <dl class="project-meta">
+          <div><dt>TYPE</dt><dd>Residential</dd></div>
+          <div><dt>STYLE</dt><dd>Modern Tropical</dd></div>
+          <div><dt>AREA</dt><dd>320 m²</dd></div>
+          <div><dt>STATUS</dt><dd>Interactive demo</dd></div>
+        </dl>
+
+        <div class="panel-actions">
+          <button class="primary-action" data-go="model">Enter 3D House <span>→</span></button>
+          <button class="secondary-action" data-go="panorama">View Interior 360°</button>
+        </div>
+      </aside>
+
+      <div class="viewer-hint" id="viewer-hint">
+        <span class="hint-icon">⌖</span>
+        <span id="hint-text">Klik bangunan atau tombol Enter 3D House</span>
+      </div>
+
+      <div class="loading-state" id="loading-state" hidden>
+        <span class="spinner"></span>
+        <span>Preparing experience…</span>
+      </div>
+    </section>
+
+    <footer class="statusbar">
+      <span>RUANG NARA DIGITAL EXPERIENCE · MVP 01</span>
+      <span id="mode-status">MAPLIBRE / SITE CONTEXT</span>
+    </footer>
+  </main>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
