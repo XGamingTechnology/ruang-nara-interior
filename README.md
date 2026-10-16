@@ -1,25 +1,23 @@
-# Ruang Nara Interior
+# TAPPA Design & Build
 
-Website promosi studio desain interior yang siap digunakan di GitHub Pages.
+Website portofolio statis TAPPA untuk GitHub Pages. Tidak perlu proses build.
 
-## Sebelum dipublikasikan
+## Struktur
 
-Ubah informasi contoh berikut di `index.html`:
+- `index.html`: halaman utama dengan hero parallax, proyek unggulan, portofolio, pendekatan, dan brief proyek.
+- `assets/css/tappa.css`: desain responsif dan efek parallax/reveal.
+- `assets/js/projects.js`: data 11 proyek dan 162 foto (dari `Tappa_Portofolio_Desain_Interior_20261014.pptx`).
+- `assets/js/tappa.js`: filter, pencarian, galeri, parallax, dan brief.
+- `assets/js/site-config.js`: kontak resmi (WhatsApp, email, Instagram). Kosongkan jika belum ada.
+- `assets/photos/`: foto WebP (lebar maksimal 1600px). `hero-cover.webp` adalah sampul PPTX.
+- `demo-3d/` dan `rab/`: prototipe 3D Showroom dan RAB.
 
-1. Nomor WhatsApp `6281234567890`
-2. Email `hello@ruangnara.com`
-3. Kota atau alamat studio
-4. Tautan Instagram, Pinterest, dan LinkedIn
-5. Nama proyek dan testimoni contoh
+## Menjalankan secara lokal
 
-Gambar portofolio berada di folder `images` dan dapat diganti memakai nama file yang sama.
+```bash
+npx http-server -p 8080 .
+```
 
-## Cara mengunggah ke GitHub Pages
+## Publikasi
 
-1. Buat repositori GitHub baru.
-2. Unggah seluruh isi folder ini ke cabang `main`.
-3. Buka **Settings**, lalu **Pages**.
-4. Pada bagian **Build and deployment**, pilih **Deploy from a branch**.
-5. Pilih cabang `main`, folder `/ (root)`, lalu klik **Save**.
-
-Situs akan tersedia pada alamat GitHub Pages setelah proses publikasi selesai.
+Settings → Pages → Deploy from a branch → `main` / root.

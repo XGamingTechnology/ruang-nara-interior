@@ -1,6 +1,6 @@
 # Interactive 3D Showroom MVP
 
-Prototype ini dibuat sebagai fondasi experience website Ruang Nara tanpa mengubah website utama.
+Prototype ini dibuat sebagai fondasi experience website TAPPA tanpa mengubah website utama.
 
 ## Flow
 
