@@ -11,6 +11,7 @@ Website portofolio statis TAPPA untuk GitHub Pages. Tidak perlu proses build.
 - `assets/js/site-config.js`: kontak resmi (WhatsApp, email, Instagram). Kosongkan jika belum ada.
 - `assets/photos/`: foto WebP (lebar maksimal 1600px). `hero-cover.webp` adalah sampul PPTX.
 - `demo-3d/` dan `rab/`: prototipe 3D Showroom dan RAB.
+- `sketchup-3d/`: showcase model 3D bergaya SketchUp yang dibangun dari `rab/data/demo-project.json` (klik elemen untuk melihat data & biaya).
 
 ## Menjalankan secara lokal
 

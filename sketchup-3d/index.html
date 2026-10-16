@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#161511" />
+  <link rel="icon" href="../favicon.png" />
+  <title>TAPPA | Model 3D SketchUp · Senopati Residence</title>
+  <meta name="description" content="Showcase model 3D bergaya SketchUp yang dibangun langsung dari data proyek Senopati Residence: dinding, lantai, plafon, bukaan, struktur, dan RAB per elemen." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="../" aria-label="Kembali ke website TAPPA">
+        <span class="brand-mark">T</span>
+        <span class="brand-copy">TAPPA<small>MODEL 3D · SKETCHUP STYLE</small></span>
+      </a>
+      <nav class="scene-tabs" id="scene-tabs" aria-label="Scene kamera">
+        <button type="button" data-scene="iso" class="is-active">Isometrik</button>
+        <button type="button" data-scene="front">Tampak depan</button>
+        <button type="button" data-scene="plan">Denah</button>
+        <button type="button" data-scene="section">Potongan</button>
+        <button type="button" data-scene="interior">Interior</button>
+      </nav>
+      <nav class="top-links" aria-label="Halaman lain">
+        <a href="../demo-3d/">3D Showroom</a>
+        <a href="../rab/">RAB ↗</a>
+      </nav>
+    </header>
+
+    <main class="workspace">
+      <section class="viewport" id="viewport" aria-label="Model 3D Senopati Residence">
+        <div class="project-card">
+          <p class="eyebrow">SHOWCASE · DIBANGUN DARI DATA</p>
+          <h1 id="project-name">Senopati<br /><em>Residence</em></h1>
+          <p id="project-meta" class="project-meta">Memuat dataset…</p>
+        </div>
+
+        <div class="style-bar" role="group" aria-label="Gaya tampilan">
+          <button type="button" data-style="sketch" class="is-active" title="Sisi putih + garis tepi, seperti default SketchUp">Sketch</button>
+          <button type="button" data-style="material" title="Material sesuai spesifikasi data">Material</button>
+          <button type="button" data-style="xray" title="Tembus pandang">X-Ray</button>
+          <button type="button" data-style="cost" title="Warna berdasarkan besar biaya">Heatmap biaya</button>
+        </div>
+
+        <div class="view-hint" id="view-hint">Drag: orbit · Klik kanan: geser · Scroll: zoom · Klik objek: lihat data</div>
+        <div class="loading" id="loading"><span class="spinner"></span><span id="loading-text">Membangun model dari data…</span></div>
+      </section>
+
+      <aside class="panel panel-left" aria-label="Outliner elemen model">
+        <div class="panel-head"><p class="eyebrow">OUTLINER</p><span id="element-count">—</span></div>
+        <div id="outliner" class="outliner"></div>
+
+        <div class="panel-block">
+          <p class="eyebrow">TAMPILAN</p>
+          <label class="toggle"><input type="checkbox" id="toggle-context" checked /> Konteks bangunan</label>
+          <label class="toggle"><input type="checkbox" id="toggle-furniture" checked /> Furnitur ilustrasi</label>
+          <label class="toggle"><input type="checkbox" id="toggle-labels" checked /> Tag ruang &amp; dimensi</label>
+          <label class="toggle"><input type="checkbox" id="toggle-shadows" checked /> Bayangan</label>
+          <label class="toggle"><input type="checkbox" id="toggle-revision" /> Bandingkan revisi lama</label>
+        </div>
+
+        <div class="panel-block">
+          <p class="eyebrow">SECTION PLANE</p>
+          <label class="toggle"><input type="checkbox" id="toggle-section" /> Aktifkan potongan</label>
+          <input type="range" id="section-height" min="0.3" max="7.2" step="0.05" value="2" aria-label="Tinggi potongan" />
+          <span class="range-value" id="section-value">2.00 m</span>
+        </div>
+      </aside>
+
+      <aside class="panel panel-right" aria-label="Entity info">
+        <div class="panel-head"><p class="eyebrow">ENTITY INFO</p><button type="button" id="clear-selection" hidden>Batal pilih</button></div>
+        <div id="entity-info" class="entity-info">
+          <p class="empty">Klik dinding, lantai, plafon, pintu, jendela, kolom, atau pelat untuk melihat data dan biayanya.</p>
+        </div>
+
+        <div class="total-card">
+          <span>TOTAL RAB DARI MODEL</span>
+          <strong id="total-cost">—</strong>
+          <small id="total-note">—</small>
+        </div>
+
+        <div class="panel-block notes">
+          <p class="eyebrow">CATATAN DATA</p>
+          <ul id="data-notes"></ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="statusbar">
+      <span id="status-text">Pilih objek untuk melihat data</span>
+      <span class="measure-box"><b>Measurements</b><output id="measure-value">—</output></span>
+    </footer>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
