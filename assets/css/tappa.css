@@ -21,10 +21,10 @@ h2 em,h1 em{font-style:italic;color:var(--gold)}
 /* Header */
 .site-header{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:28px;height:84px;padding:0 5vw;color:#fff;transition:background .4s,height .4s,color .4s,box-shadow .4s}
 .site-header.scrolled{height:68px;background:rgba(22,21,17,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
-.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.brand-mark{display:grid;place-items:center;width:40px;height:40px;border:1px solid var(--gold);color:var(--gold);font:500 20px var(--serif)}
-.brand-text{font-weight:700;font-size:15px;letter-spacing:.32em;line-height:1}
-.brand-text small{display:block;margin-top:6px;font-size:7.5px;font-weight:500;letter-spacing:.34em;color:var(--gold-soft)}
+.brand{display:block;flex-shrink:0;width:160px;transition:width .4s}
+.brand img{width:100%;height:auto}
+.site-header.scrolled .brand{width:128px}
+.footer-brand{width:240px}
 .site-header nav{display:flex;align-items:center;gap:30px;font-size:12px;letter-spacing:.06em}
 .site-header nav a{position:relative;padding:6px 0;opacity:.85;transition:opacity .2s}
 .site-header nav a:hover{opacity:1}
